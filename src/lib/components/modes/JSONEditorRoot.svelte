@@ -70,12 +70,20 @@
   let refTableMode: TableMode | undefined
   let refTextMode: TextMode | undefined
 
+  const modeMap = {
+    text: '文本',
+    tree: '树状',
+    table: '表格'
+  }
+
   let modeMenuItems: MenuItem[]
   $: modeMenuItems = [
     {
       type: 'button',
-      text: 'text',
-      title: `Switch to text mode (current mode: ${mode})`,
+      // text: 'text',
+      // title: `Switch to text mode (current mode: ${mode})`,
+      text: '文本',
+      title: `切换至文本模式 (当前模式: ${modeMap[mode]})`,
       // check for 'code' mode is here for backward compatibility (deprecated since v0.4.0)
       className:
         'jse-group-button jse-first' +
@@ -84,15 +92,19 @@
     },
     {
       type: 'button',
-      text: 'tree',
-      title: `Switch to tree mode (current mode: ${mode})`,
+      // text: 'tree',
+      // title: `Switch to tree mode (current mode: ${mode})`,
+      text: '树状',
+      title: `切换至树状模式 (当前模式: ${modeMap[mode]})`,
       className: 'jse-group-button ' + (mode === Mode.tree ? ' jse-selected' : ''),
       onClick: () => onChangeMode(Mode.tree)
     },
     {
       type: 'button',
-      text: 'table',
-      title: `Switch to table mode (current mode: ${mode})`,
+      // text: 'table',
+      // title: `Switch to table mode (current mode: ${mode})`,
+      text: '表格',
+      title: `切换至表格模式 (当前模式: ${modeMap[mode]})`,
       className: 'jse-group-button jse-last' + (mode === Mode.table ? ' jse-selected' : ''),
       onClick: () => onChangeMode(Mode.table)
     }

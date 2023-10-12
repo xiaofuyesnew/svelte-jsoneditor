@@ -433,7 +433,9 @@
   ]
 </script>
 
+<!-- tip={showTip ? 'Tip: you can open this context menu via right-click or with Ctrl+Q' : undefined} -->
+
 <ContextMenu
   {items}
-  tip={showTip ? 'Tip: you can open this context menu via right-click or with Ctrl+Q' : undefined}
+  tip={showTip ? '提示: 通过右键或 Ctrl+Q 打开此菜单' : undefined}
 />

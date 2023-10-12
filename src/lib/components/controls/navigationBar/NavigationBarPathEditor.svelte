@@ -116,7 +116,8 @@
     </button>
   {/if}
   {#if copied}
-    <div class="jse-copied-text">Copied!</div>
+    <!-- <div class="jse-copied-text">Copied!</div> -->
+    <div class="jse-copied-text">已复制</div>
   {/if}
   <button
     type="button"

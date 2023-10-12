@@ -109,12 +109,14 @@
     />
   {/if}
 
+<!-- title={editing ? 'Cancel editing the selected path' : 'Edit the selected path'} -->
+
   <button
     type="button"
     class="jse-navigation-bar-edit"
     class:flex={!editing}
     class:editing
-    title={editing ? 'Cancel editing the selected path' : 'Edit the selected path'}
+    title={editing ? '撤销编辑选中的路径' : '编辑选中的路径'}
     on:click={toggleEditing}
   >
     <span class="jse-navigation-bar-space">

@@ -49,7 +49,8 @@
   $: expandMenuItem = {
     type: 'button',
     icon: faJSONEditorExpand,
-    title: 'Expand all',
+    // title: 'Expand all',
+    title: '全部展开',
     className: 'jse-expand-all',
     onClick: onExpandAll,
     disabled: !isObjectOrArray(json)
@@ -59,7 +60,8 @@
   $: collapseMenuItem = {
     type: 'button',
     icon: faJSONEditorCollapse,
-    title: 'Collapse all',
+    // title: 'Collapse all',
+    title: '全部收起',
     className: 'jse-collapse-all',
     onClick: onCollapseAll,
     disabled: !isObjectOrArray(json)
@@ -86,7 +88,8 @@
         {
           type: 'button',
           icon: faSortAmountDownAlt,
-          title: 'Sort',
+          // title: 'Sort',
+          title: '排序',
           className: 'jse-sort',
           onClick: onSort,
           disabled: readOnly || json === undefined
@@ -113,7 +116,8 @@
         {
           type: 'button',
           icon: faUndo,
-          title: 'Undo (Ctrl+Z)',
+          // title: 'Undo (Ctrl+Z)',
+          title: '撤销 (Ctrl+Z)',
           className: 'jse-undo',
           onClick: onUndo,
           disabled: !historyState.canUndo
@@ -121,7 +125,8 @@
         {
           type: 'button',
           icon: faRedo,
-          title: 'Redo (Ctrl+Shift+Z)',
+          // title: 'Redo (Ctrl+Shift+Z)',
+          title: '重做 (Ctrl+Shift+Z)',
           className: 'jse-redo',
           onClick: onRedo,
           disabled: !historyState.canRedo
@@ -139,7 +144,8 @@
         {
           type: 'button',
           icon: faCopy,
-          title: 'Copy (Ctrl+C)',
+          // title: 'Copy (Ctrl+C)',
+          title: '复制 (Ctrl+C)',
           className: 'jse-copy',
           onClick: onCopy,
           disabled: !hasSelectionContents

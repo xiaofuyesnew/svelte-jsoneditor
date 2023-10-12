@@ -86,7 +86,8 @@
 </script>
 
 <div class="jse-modal jse-sort" use:onEscape={close}>
-  <Header title={jsonIsArray ? 'Sort array items' : 'Sort object keys'} />
+  <!-- <Header title={jsonIsArray ? 'Sort array items' : 'Sort object keys'} /> -->
+  <Header title={jsonIsArray ? '数组排序' : '对象键排序'} />
 
   <div class="jse-modal-contents">
     <table>
@@ -96,7 +97,8 @@
       </colgroup>
       <tbody>
         <tr>
-          <th>Path</th>
+          <!-- <th>Path</th> -->
+          <th>路径</th>
           <td>
             <input
               class="jse-path"
@@ -116,7 +118,7 @@
           </tr>
         {/if}
         <tr>
-          <th>Direction</th>
+          <th>规则</th>
           <td>
             <Select
               showChevron
@@ -145,7 +147,8 @@
         use:focus
         disabled={jsonIsArray ? !selectedProperty : false}
       >
-        Sort
+        <!-- Sort -->
+        排序
       </button>
     </div>
   </div>
